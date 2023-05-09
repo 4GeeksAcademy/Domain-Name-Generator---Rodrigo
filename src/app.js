@@ -1,11 +1,15 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  const DomainGenerator = () =>{
+  let pronoun = ['The','Your','Our','My'];
+  let adj = ['Great','Big','Small','Ignorant' ];
+  let noun = ['Poet','Racoon','Hamster','Grandma','Uncle','Rooster'];
+  let domain = ['.com','.net','.us','.io']
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  return (
+    pronoun[Math.floor(Math.random() * pronoun.length)] +
+    adj[Math.floor(Math.random() * adj.length)] +
+    noun[Math.floor(Math.random() * noun.length)] +
+    domain[Math.floor(Math.random() * domain.length)]
+  );
+}
+console.log(DomainGenerator());
